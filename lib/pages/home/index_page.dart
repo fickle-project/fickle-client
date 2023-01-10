@@ -1,7 +1,9 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fickle_client/components/_components.dart';
-import 'package:fickle_client/utils/_utils.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({super.key});
@@ -10,7 +12,7 @@ class IndexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    if (size.isMobile) {
+    if (!kIsWeb && (Platform.isIOS || Platform.isAndroid)) {
       return Scaffold(
         body: DefaultTabController(
           length: 4,
