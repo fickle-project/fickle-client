@@ -16,7 +16,7 @@ class FickleColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
         Card(
           child: ListTile(
